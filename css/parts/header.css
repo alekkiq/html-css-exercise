@@ -1,0 +1,68 @@
+header.site-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.5rem;
+    padding: 1.25rem 0;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+
+    & .logo {
+        max-height: 36px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    & .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>ul {
+            display: flex;
+            column-gap: 0.25rem;
+
+            &>li {
+                &>a {
+                    padding: 0.5rem 0.75rem;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 0.925rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.current-page {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header.site-header {
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+
+        & .logo {
+            max-height: 48px;
+        }
+
+        & .navigation {
+            &>ul {
+                column-gap: 2rem;
+
+                &>li {
+                    &>a {
+                        padding: 0.75rem 1rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
