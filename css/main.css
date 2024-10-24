@@ -111,7 +111,7 @@ h2 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
 
-    & > .product {
+    &>.product {
         display: flex;
         flex-direction: column;
         background-color: var(--white);
@@ -120,29 +120,32 @@ h2 {
         overflow: hidden;
         padding: 1rem;
         position: relative;
-        
-        & > *:not(:last-child) {
+
+        &>*:not(:last-child) {
             margin-bottom: 1rem;
         }
 
-        & > img {
-            max-width: 100%;
-            position: relative;
-            object-fit: cover;
+        &>figure {
+            &>img {
+                max-width: 100%;
+                position: relative;
+                object-fit: cover;
+            }
+
+            &>.subtitle {
+                font-size: 1rem;
+                font-style: italic;
+                color: var(--secondary-color);
+                font-weight: 500;
+            }
         }
 
-        & > .title {
+        &>.title {
             font-size: 1.5rem;
         }
 
-        & > .subtitle {
-            font-size: 1rem;
-            font-style: italic;
-            color: var(--secondary-color);
-            font-weight: 500;
-        }
 
-        & > .info {
+        &>.info {
             font-size: 1rem;
         }
     }
@@ -157,8 +160,8 @@ h2 {
 @media screen and (min-width: 842px) {
     .products {
         grid-template-columns: repeat(3, 1fr);
-        
-        & > .product {
+
+        &>.product {
             padding-inline: 1.25rem;
         }
     }
@@ -176,17 +179,18 @@ h2 {
         margin-bottom: 1rem;
     }
 
-    & > .content {
-        & > .info {
+    &>.content {
+        &>.info {
             font-size: 1rem;
 
-            & > a {
+            &>a {
                 margin-top: 0.5rem;
                 color: #007bff;
                 font-weight: 500;
                 text-decoration: underline;
             }
         }
+
         & hr {
             margin-block: 1rem;
         }
